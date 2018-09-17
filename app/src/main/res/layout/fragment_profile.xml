@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pratik.vehicle.MainActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/RmLayout" >
+
+        <TextView
+            android:id="@+id/usernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logger username: "
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft = "true"
+            />
+
+        <EditText
+            android:id="@+id/usernameValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your name?"
+            android:text=""
+            android:layout_alignLeft="@+id/usernameTxt"
+            android:layout_below="@+id/usernameTxt"
+            />
+
+        <TextView
+            android:id="@+id/password1Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password: "
+            android:layout_alignLeft="@+id/usernameValue"
+            android:layout_below="@+id/usernameValue"
+            />
+
+        <EditText
+            android:id="@+id/password1Value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password?"
+            android:text=""
+            android:layout_alignLeft="@+id/password1Txt"
+            android:layout_below="@+id/password1Txt"
+            />
+
+        <TextView
+            android:id="@+id/password2Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat password: "
+            android:layout_alignLeft="@+id/password1Value"
+            android:layout_below="@+id/password1Value"
+            />
+
+        <EditText
+            android:id="@+id/password2Value"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repeat password here"
+            android:text=""
+            android:layout_alignLeft="@+id/password2Txt"
+            android:layout_below="@+id/password2Txt"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/password2Value">
+            <Button
+                android:id="@+id/btnProfileSave"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save profile"
+                android:onClick="profileSaveClick"
+                />
+            <Button
+                android:id="@+id/btnProfileCancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel profile"
+                android:onClick="profileCancelClick"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

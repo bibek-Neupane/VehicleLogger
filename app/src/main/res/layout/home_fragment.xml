@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pratik.vehicle.MainActivity">
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/btnCar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Car"
+        android:onClick="clickVehicle"
+        android:tag="0"
+        style="@style/Widget.AppCompat.Button"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn5tTruck"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="5t Truck"
+        android:layout_below="@id/btnCar"
+        android:onClick="clickVehicle"
+        android:tag="1"
+        />
+
+    <Button
+        android:id="@+id/btn10tTruck"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="10t Truck"
+        android:layout_below="@id/btn5tTruck"
+        android:onClick="clickVehicle"
+        android:tag="2"
+        />
+
+    <Button
+        android:id="@+id/btnTipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipper"
+        android:layout_below="@id/btn10tTruck"
+        android:onClick="clickVehicle"
+        android:tag="3"
+        />
+
+    <Button
+        android:id="@+id/btnArticulated"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Articulated"
+        android:layout_below="@id/btnTipper"
+        android:onClick="clickVehicle"
+        android:tag="4"
+        />
+
+</RelativeLayout>
+

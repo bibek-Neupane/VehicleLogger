@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RmLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="right" >
+
+    <TextView
+        android:id="@+id/car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="32dp"
+        android:text="Car"  />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/car"
+        android:layout_alignParentLeft="true" >
+
+        <TextView
+            android:id="@+id/driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver: "
+            android:textSize="18dp"    />
+        <EditText
+            android:id="@+id/driverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Drivers' name"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentLeft="true" >
+        <TextView
+            android:id="@+id/rego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Rego #: "		 />
+        <EditText
+            android:id="@+id/regoNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="xxx-yyy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/btnStartTime"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:onClick="btnTime1"
+            android:text="Start time: "
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""		 />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line3"
+        android:layout_alignParentLeft="true" >
+        <Button
+            android:id="@+id/btnFirstBreak"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:onClick="btnTime2"
+            android:text="First break: "
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/firstBreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""		 />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line4"
+        android:layout_alignParentLeft="true" >
+        <Button
+            android:id="@+id/btnSecondBreak"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:onClick="btnTime3"
+            android:text="Second break"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/secondBreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/btnSecondBreak"
+            android:text=""		 />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line5"
+        android:layout_alignParentLeft="true" >
+        <Button
+            android:id="@+id/btnEndTime"
+            android:layout_width="140sp"
+            android:layout_height="wrap_content"
+            android:onClick="btnTime4"
+            android:text="End time"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""		 />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line6"
+        android:layout_alignParentLeft="true"
+        android:onClick="btnSaveEntry"
+        android:text="Save Log Entry" />
+    <Button
+        android:id="@+id/btnShowEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnSaveEntry"
+        android:onClick="clickVehicleList"
+        android:text="Show Log Entries" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:layout_weight="1"
+            android:onClick="clickPrev" />
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_weight="1"
+            android:onClick="clickNext" />
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:layout_weight="1"
+            android:onClick="clickHome" />
+    </LinearLayout>
+
+</RelativeLayout>
